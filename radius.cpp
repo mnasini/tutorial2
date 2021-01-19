@@ -2,9 +2,9 @@
 #include <math.h>
 using namespace std;
 void control(int x_centre,int y_centre,int radius, int x, int y){
-	if((pow((x-x_centre),2)-pow((y-y_centre),2))<pow(radius,2)){
+	if((pow((x-x_centre),2)+pow((y-y_centre),2))<pow(radius,2)){
 		cout<<"is inside";
-		
+	
 		
 	}
 	else{
