@@ -16,7 +16,7 @@ void control(int x_centre,int y_centre,int radius, int x, int y){
 int main(){
 	int x_centre;
 	int y_centre;
-	int radius;
+	unsigned int radius;
 	int x;
 	int y;
 	cout<<"insert x_center ";
