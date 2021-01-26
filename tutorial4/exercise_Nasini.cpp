@@ -45,10 +45,27 @@ void print_poly(double *c, int n){
   cout << endl;
 }
 //function that given 2 polinomials and its degrees, will sum them 
-double * poli_sum(){
+double * poli_sum(double *first_pol,double *second_pol,int &g2,int &g3,int &gres){
 	
 	
+	int max= (g2 >= g3) ? g2 : g3;
+	gres=max;
+	double *pol=new double[gres+1];
+	for(int f=0;f<=gres;f++){
+		pol[f]=0;
+	}
 	
+	for(int i=0;i<=gres;i++){
+		if (g2>=i){
+			pol[i]=pol[i]+first_pol[i];
+		}
+		if (g3>=i){
+			pol[i]=pol[i]+second_pol[i];
+		}
+		
+	}
+	
+	return pol;
 }
 
 int main()
@@ -75,7 +92,9 @@ int main()
   print_poly(first_pol,g2);
   second_pol=read_poly(g3);
   print_poly(second_pol,g3);
-  //sum_res=
+  sum_res=poli_sum(first_pol,second_pol,g2,g3,gres);
+  cout<<"the resulting sum of the two polinomial is: "<<endl;
+  print_poly(sum_res,gres);
 
   delete[] p1;
   delete[] first_pol;
