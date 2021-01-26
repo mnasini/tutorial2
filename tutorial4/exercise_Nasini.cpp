@@ -120,6 +120,6 @@ int main()
   delete[] first_pol;
   delete[] second_pol;
   delete[] sum_res;
-  //delete[] mul_res;
+  delete[] mul_res;
   return 0;
 }
