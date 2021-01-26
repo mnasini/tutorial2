@@ -121,5 +121,6 @@ int main()
   delete[] second_pol;
   delete[] sum_res;
   delete[] mul_res;
+  system("pause");
   return 0;
 }
