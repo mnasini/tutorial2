@@ -68,6 +68,23 @@ double * poli_sum(double *first_pol,double *second_pol,int &g2,int &g3,int &gres
 	return pol;
 }
 
+//this function returns a resulting polinomials thet is  the product of two polinomials 
+double * poli_mul(double *first_pol,double *second_pol,int &g2, int &g3,int &gres){
+	gres=g2+g3;
+	double *pol=new double[gres+1];
+		for(int f=0;f<=gres;f++){
+		pol[f]=0;
+	}
+	for(int i=0;i<=g3;i++){
+		for (int g=0;g<=g2;g++){
+			pol[i+g]=pol[i+g]+(second_pol[i]*first_pol[g]);
+			
+		}
+	}
+	
+	return pol;
+}
+
 int main()
 {
   double *p1;
@@ -95,6 +112,9 @@ int main()
   sum_res=poli_sum(first_pol,second_pol,g2,g3,gres);
   cout<<"the resulting sum of the two polinomial is: "<<endl;
   print_poly(sum_res,gres);
+  mul_res=poli_mul(first_pol,second_pol,g2,g3,gres);
+  cout<<"the resulting multiplication of the two polinomial is: "<<endl;
+  print_poly(mul_res,gres);
 
   delete[] p1;
   delete[] first_pol;
