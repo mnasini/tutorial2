@@ -32,14 +32,4 @@ class Point{
 };
 
 
-int main(){
-	Point p1=Point();
-	Point p2=Point(2,2);
-	p1.display();
-	p2.display();
-	p1.distance(p2);
 
-	
-	
-	return 0;
-}
