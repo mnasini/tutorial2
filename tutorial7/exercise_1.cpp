@@ -99,6 +99,7 @@ class Patient{
 
 
 int main(){
+	//inserting data for mary
 Patient mary("Mary");
 mary.addrecord(Blood(94,61, Date(2,5,2013)));
 mary.addrecord(Blood(97,65, Date(3,5,2013)));
@@ -106,7 +107,20 @@ mary.addrecord(Blood(144,99, Date(4,5,2013)));
 mary.addrecord(Blood(123,88, Date(5,5,2013)));
 mary.addrecord(Blood(177,110, Date(6,5,2013)));
 mary.addrecord(Blood(145,89, Date(7,5,2013)));
+//inserting data for john
+Patient john("John");
+john.addrecord(Blood(88,57, Date(15,5,2013)));
+john.addrecord(Blood(95,61, Date(16,5,2013)));
+john.addrecord(Blood(114,80, Date(17,5,2013)));
+john.addrecord(Blood(151,96, Date(18,5,2013)));
+john.addrecord(Blood(176,104, Date(19,5,2013)));
+john.addrecord(Blood(176,110, Date(20,5,2013)));
+
+//printing report for mary
 mary.printReport();
+cout<<"\n"<<endl;
+//printing report for john 
+john.printReport();
 
 	return 0;
 }
