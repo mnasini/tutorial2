@@ -65,13 +65,19 @@ class Patient{
 			
 		}
 		void printReport(){
+			int f=0;
 			cout<<"the highest abnormal blood pressures of "<<name<<":"<<endl;
 			for(int i=0;i<data.size();i++){
 				if(data[i].showsyst()>140){
+					f++;
 					cout<<"day: "<<data[i].showdate().getd()<<"/"<<data[i].showdate().getm()<<"/"<<data[i].showdate().gety()<<" systolic value: "<<data[i].showsyst()<<" distolic value: "<<data[i].showdiastol()<<endl;
 				}
 				
+				
 			}
+			if (f==0){
+					cout<<"no measurement was too high"<<endl;
+				}
 			
 		}
 		
