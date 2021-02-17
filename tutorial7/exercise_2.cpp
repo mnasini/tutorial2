@@ -3,18 +3,18 @@
 using namespace std;
 
 
-
-/*class StackI {
+template <typename T>
+class StackI {
 public:
 virtual void push(T t) = 0;
 virtual void pop() = 0;
 virtual T top() =0;
 virtual void print()=0;
 };
-*/
+
 
 template <typename T>
-class Stack {
+class Stack : public StackI<T>{
 
 	private:
 		int elements;
