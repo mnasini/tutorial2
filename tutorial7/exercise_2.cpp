@@ -98,9 +98,9 @@ int main(){
 	ciao.pop();
 	cout<<"the new top is: "<<ciao.top()<<endl;
 	cout<<"deleting the stack..."<<endl;
+	// class ciao will go out of scope here so destructor will be called, i could also have allocated the object ciao dyamically (on heap) to have the possibility of deallocating it
 	
-	
-
+	//with the command delete 
 
 	
 	
