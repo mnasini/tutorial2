@@ -33,7 +33,11 @@ class Stack {
 			list=new T[elements];
 			current=0;
 		}
-		
+		~Stack(){
+			delete [] list;
+			cout<<"stack successfully deleted"<<endl;
+
+		} 
 		T top(){
 			if (current==0){ 
 		cout<<"EmptyStackException"<<endl; // here i should raise an actual exception
@@ -93,6 +97,8 @@ int main(){
 	cout<<"now i'll remove the top...."<<endl;
 	ciao.pop();
 	cout<<"the new top is: "<<ciao.top()<<endl;
+	cout<<"deleting the stack..."<<endl;
+	
 	
 
 
